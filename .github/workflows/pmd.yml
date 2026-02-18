@@ -1,0 +1,19 @@
+
+name : pmd code analysis
+
+on:
+  push:
+    branches: [ "Gnarks-pmd", "main" ]
+  pull_request:
+    branches: [ "Gnarks-pmd", "main" ]
+
+steps:
+  - uses: actions/checkout@v6
+  - uses: actions/setup-java@v5
+    with:
+      distribution: 'temurin'
+      java-version: '24'
+  - uses: pmd/pmd-github-action@v2
+    with:
+      rulesets: ‘category/java/errorprone.xml’
+
