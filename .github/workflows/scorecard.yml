@@ -29,11 +29,10 @@ jobs:
       # Needed to publish results and get a badge (see publish_results below).
       id-token: write
 
+
     steps:
-      - name: "Checkout code"
+
       - uses: actions/checkout@v6
-        with:
-          persist-credentials: false
 
       - name: "Run analysis"
         uses: ossf/scorecard-action@f49aabe0b5af0936a0987cfb85d86b75731b0186 # v2.4.1
