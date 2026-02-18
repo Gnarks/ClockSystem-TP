@@ -65,7 +65,10 @@ jobs:
     - name: Build with Gradle 9.1.0
       run: gradle build
 
-    - uses: actions/upload-artifact@v6
+
+    - name: Test Report
+      if : always()
+      uses: actions/upload-artifact@v6
       with:
         # Name of the artifact to upload.
         # Optional. Default is 'artifact'
@@ -99,7 +102,8 @@ jobs:
         # If false, the action will fail if an artifact for the given name already exists.
         # Does not fail if the artifact does not exist.
         # Optional. Default is 'false'
-        overwrite:
+        overwrite: 
+          true
 
         # Whether to include hidden files in the provided path in the artifact
         # The file contents of any hidden files in the path should be validated before
