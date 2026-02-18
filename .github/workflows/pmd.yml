@@ -23,6 +23,7 @@ jobs:
           java-version: '24'
       - uses: pmd/pmd-github-action@v2
         with:
+          analyzeModifiedFilesOnly: "false"
           sourcePath: 'app/src/main/java'
           rulesets: 'category/java/errorprone.xml'
       - name: Fail build if there are violations
