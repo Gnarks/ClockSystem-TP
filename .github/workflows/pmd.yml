@@ -23,5 +23,5 @@ jobs:
           java-version: '24'
       - uses: pmd/pmd-github-action@v2
         with:
-          rulesets: ‘category/java/errorprone.xml’
+          rulesets: 'category/java/errorprone.xml'
 
