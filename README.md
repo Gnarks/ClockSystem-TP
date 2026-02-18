@@ -1,4 +1,5 @@
 ![GitHub Actions Workflow Status](https://github.com/gnarks/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
+![pmd](https://github.com/gnarks/ClockSystem-TP/actions/workflows/pmd.yml/badge.svg)
 # ClockSystem
 
 This is a gradle-based Java project for a Clock with Swing GUI and JUnit5 unit tests. It has been created and used by Tom Mens for educational purposes at the University of Mons.
