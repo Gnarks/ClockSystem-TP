@@ -17,13 +17,12 @@ on:
 
 jobs:
 
-  matrix:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
 
   build:
-
+    matrix:
+      strategy:
+        matrix:
+          os: [ubuntu-latest, macos-latest, windows-latest]
     env:
       DISPLAY: ":99.0"
       # Set a display for Xvfb
@@ -33,7 +32,7 @@ jobs:
         image: selenium/standalone-chrome:latest
         options: -e VNC_SERVER=true -e VNC_PORT=5900
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     permissions:
       contents: read
 
